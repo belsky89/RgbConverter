@@ -18,7 +18,7 @@ namespace RgbConverter
                 GetInputNumber(ref red);
                 GetInputNumber(ref green);
                 GetInputNumber(ref blue);
-
+                
                 result = GetHexRepresentation(red, green, blue);
 
                 Console.WriteLine($"Your result: {result}");
@@ -41,19 +41,6 @@ namespace RgbConverter
             {
                 Console.Write("This is not valid input. Please enter an integer number: ");
                 numInput = Console.ReadLine();
-            }
-
-            while (numColour < 0 || numColour > 255)
-            {
-                Console.Write("This is not valid input. Valid decimal values for RGB are 0 - 255." +
-                    "\n Please enter a number from the specified range: ");
-                numInput = Console.ReadLine();
-
-                while (!int.TryParse(numInput, out numColour))
-                {
-                    Console.Write("This is not valid input. Please enter an integer number: ");
-                    numInput = Console.ReadLine();
-                }
             }
         }
 
